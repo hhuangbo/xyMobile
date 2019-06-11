@@ -57,6 +57,7 @@ export default {
                 {name:'产业园区'},
                 {name:'运动场馆'},
                 {name:'三方物流'},
+                {name:'智能制造'},
                 {name:'智能制造'}
             ],
             contentData:{},
@@ -153,12 +154,14 @@ export default {
     top: -.25rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     box-sizing: border-box;
     border-radius: .05rem;
     overflow: hidden;
     box-shadow:.01rem .10rem 20rem 0 rgba(227,230,232,.6);
     li{padding:.2rem .4rem;text-align:center;cursor: pointer;}
     .active{background-color: $C43bee3;color: #fff;}
+    li:last-child{visibility: hidden;}
 }
 
 </style>

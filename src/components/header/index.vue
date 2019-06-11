@@ -3,9 +3,9 @@
         <div class="logo">
             <img :src="opLogo"/>
         </div>
-        <div class="toggleMenu iconfont iconmenu-open" @touchstart="hanleMenuOpen"></div>
+        <div class="toggleMenu iconfont iconmenu-open" @touchstart="hanleMenuOpen($event)"></div>
         <transition>
-            <nav :class="['menuList animated  deplay-5ms',menuShow ? 'fadeInDown': 'fadeOutUp']" v-show="menuShow">
+            <nav :class="['menuList animated  deplay-2ms',menuShow ? 'fadeInDown': 'fadeOutUp']" v-show="menuShow" ref="mbMenu">
                 <div>
                 <!-- :class="{'navActive' : index==menuVisible}" -->
                 <li v-for="(item,index) in menuList" @touchstart="handleSelect(item,index)"  :class="{ 'navActive' : index==menuVisible}">{{item.title}}</li>
@@ -43,10 +43,15 @@ export default {
     },
     mounted(){
         window.addEventListener('scroll', this.handleScroll,true)//监听滚动条的位置
-        this.init();        
+        this.init();     
+        window.addEventListener('touchstart', (e) => {
+            this.menuShow = false
+        })   
     },
     methods:{
-        hanleMenuOpen(){
+        hanleMenuOpen(event){//阻止冒泡
+　　　　　　　event || (event = window.event);
+　　　　　　　event.stopPropagation ? event.stopPropagation() : (event.cancelBubble = true);
             this.menuShow=true;
         },
         hanleMenuClose(){
@@ -55,7 +60,6 @@ export default {
         handleScroll(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
             let offsetTop = document.querySelector('#header').offsetHeight;
-            console.log('哈哈哈哈',scrollTop,offsetTop)
             scrollTop > offsetTop ? this.headerFixed = true : this.headerFixed = false
         },
         init(){
@@ -72,6 +76,7 @@ export default {
     destroyed(){
         //销毁监听事件
         window.removeEventListener('scroll', this.handleScroll);
+        window.addEventListener('touchstart')
     }
 }
 </script>
@@ -82,7 +87,7 @@ export default {
 }
 header{
     width: 100%;
-    padding: .4rem;
+    padding: 4%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -91,7 +96,8 @@ header{
     z-index: 9;
 }
 .headerFixed{
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: #000;
+    opacity: 0.9;
     box-shadow:0.01rem 0.01rem 0.1rem 0 rgba(0, 0, 0, 0.6);
 }
 .logo img{vertical-align: middle;}
@@ -104,7 +110,7 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.87);
     opacity: .6;
     text-align: center;
     color: #fff;

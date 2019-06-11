@@ -1,6 +1,6 @@
 <template>
   <transition>
-    <div class="banner animated fadeIn " :style="{backgroundImage:'url(' + data.bannerImg + ')'}">
+    <div class="banner" :style="{backgroundImage:'url(' + data.bannerImg + ')'}">
         <div class="bCont">
           <h2 class="animated fadeInDown delay-100ms">{{data.title}}</h2>
           <h4 class="animated bounceInLeft delay-150ms" v-html="data.content"></h4>

@@ -38,11 +38,14 @@
         <div class="content item_3">
             <h3>{{proceData.typeName}}</h3>
             <div class="abCont">
-                <div class="item" v-for="ite in proceData.data">
-                    <span>{{ite.title}}</span>
-                    <p>{{ite.content}}</p>
+                <div  class="item" v-for="(ite,index) in proceData.data">
+                    <div class="cont">
+                        <span>{{ite.title}}</span>
+                        <p>{{ite.content}}</p>
+                    </div>
+                    <div :class="'iconfont iconright bg bg_'+(index)"></div>
                 </div>
-                <!-- <div class="bg"></div> -->
+                <!--  -->
             </div>
         </div>
     </div>
@@ -105,7 +108,7 @@ export default {
 $fontC:#686868;
 h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
 .item_1{
-    p{font-size: .2rem;color: $fontC;line-height: .5rem;flex:4;}
+    p{font-size: .2rem;color: $fontC;line-height: .5rem;flex:3;}
     .abCont{width: 90%;margin: 0 auto;}
     .servItem{
         display: flex;    
@@ -114,7 +117,7 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
             flex:1;
             color: $C43bee3;
             span{display: block;}
-            .title{font-size: .24rem;}
+            .title{font-size: .3rem;}
         }
         .iconfont{font-size: .30rem;padding: 0 22%;}
     }
@@ -133,27 +136,26 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
         box-sizing: border-box;
         background:url(../../assets/images/s-1.jpg) no-repeat;
         background-size: 100% auto;
-        overflow: hidden;
         &:before{
             content: "";
             display: block;
             padding-top: 53%;
         }
     }
-    // .bgImg{width:100%;height:100%;position:absolute;background:url(../../assets/images/s-1.jpg) no-repeat;background-size: cover;}
     .opbg{width:100%;height:100%;background-color: #002233;opacity: .6;position: absolute;top:0;left:0;z-index: 0;}
     .itemCont{
         width:100%;height:100%;
         position:absolute;
         left: 0;
-        top: 0;
-        font-size:24rem;
+        top: 10%;
+        font-size:.24rem;
         box-sizing: border-box;
         text-align: center;
     }
     .serviceCont{width:100%;height:100%;display: flex;
         text-align: center;justify-content: space-around;
-        position:absolute;top:0;
+        position:absolute;top:40%;
+        img{width: .7rem;}
     }
     .abCont2{width:100%;
         background-color:$C1075aa;padding: 5% 8%;
@@ -169,21 +171,39 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
     .abCont{display: flex;flex-wrap: wrap;}
     .item {    
         position: relative;
-        width: 46%;
-        padding: 2%;
-        margin: 2%;
-        background-color: #fff;
+        width: 43%;
+        height: 2rem;
+        margin: 3%;
         box-sizing: border-box;
-        // &:after {    
-        //     content: "";
-        //     position: absolute;
-        //     height: 0;
-        //     top: 0rem;
-        //     right: -16%;
-            // border-top: 45rem solid transparent;
-            // border-left: 43rem solid #fff;
-            // border-bottom: 45rem solid transparent;
-        // }
+        position: relative;
+    }
+    .cont{
+        width:85%;
+        height: 1.5rem;
+        padding: 5%;
+        background-color: #fff;
+    }
+    .bg{
+        position: absolute;
+        font-size: .8rem;
+        color: #43bee3;
+    }
+    .bg_0{
+        top: 24%;
+        right: -18%;
+    }
+    .bg_1{
+        &::before{content: "\eaae";}
+        bottom: -24%;
+        left: 34%;
+    }
+    .bg_2{
+        &::before{content: "";}   
+    }
+    .bg_3{
+        &::before{content: "\eaf4";} 
+        left: -22%;
+        top: 24%;
     }
 }
 </style>

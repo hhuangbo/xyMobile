@@ -1,5 +1,5 @@
 <template>
-    <p class="copyright">Copyright © 2017 - 2019 北京新娱互动网络科技有限公司. All rights reserved</p>
+    <p class="copyright">Copyright © 2017 - 2019 北京新娱互动网络科技有限公司. All rights reserved 京ICP备19019539号-1</p>
 </template>
 
 <script>

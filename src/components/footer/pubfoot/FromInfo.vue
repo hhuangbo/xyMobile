@@ -4,15 +4,15 @@
             <h2>数据驱动，从现在开始！</h2>
             <div class="fromItem">
                 <label>姓名：</label>
-                <input value="" />
+                <input type="text" value="" v-model.trim = "info.name"/>
             </div>
             <div class="fromItem">
-                <label>电话：</label>
-                <input value="" />
+                <label >电话：</label>
+                <input type="text" value="" v-model.trim = "info.phone" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
             </div>
             <div class="fromItem">
                 <label>邮箱：</label>
-                <input value=""/>
+                <input type="email" value="" v-model.trim = "info.email"/>
             </div>
             <button class="btnsubmit" @click="btnsubmit()">提交申请</button>
         </div>
@@ -31,11 +31,17 @@ export default {
     data(){
         return{
             isShow:false,
+            info:{
+                name:'',
+                phone:'',
+                email:''
+            }
         }
     },
     methods:{
         btnsubmit(){
-            this.isShow = true
+            this.isShow = true;
+            console.log(this.info.phone)
         },
         btnClose(){
             this.isShow = false
@@ -46,7 +52,6 @@ export default {
 
 <style lang="scss" scoped>
 .fromInfo{
-    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;

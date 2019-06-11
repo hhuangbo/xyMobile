@@ -44,7 +44,7 @@ article{
     width: 77%;
     position: absolute;
     top: 60%;
-    left: 50%;
+    left: 56%;
     transform: translate(-50%,-50%);
     text-align: left;
 }
@@ -54,7 +54,46 @@ h2{
 }
 h4{
     font-size: .3rem;
-    padding-top: .2rem;
+    padding-top: .5rem;
     color: #fff;
+}
+@media screen and (max-width:300px){
+    article{
+        top:54%;
+        // left:56%;
+    }
+}
+@media screen and (min-width:410px) and (max-width:420px){
+    article{
+        top:54%;
+        // left:56%;
+    }
+}
+@media screen and (width:411px){
+    article{
+        top:54%;
+    }
+}
+@media screen and (min-width:320px) and (max-width:500px){
+    article{
+        top:60%;
+        // left:56%;
+    }
+}
+@media screen and (width:375px) and (height:812px){
+    article{
+        top:54%;
+    }
+}
+@media screen and (width:411px) and (height:823px){
+    article{
+        top:54%;
+    }
+}
+@media screen and (min-width:750px) and (max-width:1024px){
+    article{
+        top:81%;
+        left:56%;
+    }
 }
 </style>

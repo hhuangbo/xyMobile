@@ -18,4 +18,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
 }
+@media screen and (min-width:1050px) {
+  html,body{font-size: 40px !important;}
+}
 </style>
