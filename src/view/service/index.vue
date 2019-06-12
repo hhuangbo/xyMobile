@@ -109,7 +109,7 @@ export default {
 $fontC:#686868;
 h3{font-size: px2rem(36);color: #353535;text-align: center;line-height:px2rem(64);}
 .item_1{
-    p{font-size: px2rem(20);color: $fontC;line-height: px2rem(40);flex:3;}
+    p{font-size: px2rem(24);color: $fontC;line-height: px2rem(40);flex:3;}
     .abCont{width: 90%;margin: 0 auto;}
     .servItem{
         display: flex;    
@@ -164,13 +164,13 @@ h3{font-size: px2rem(36);color: #353535;text-align: center;line-height:px2rem(64
         span{padding-bottom: px2rem(25);}
     }
     span{display: block;font-size: px2rem(30);}
-    p{line-height: px2rem(40);font-size: px2rem(20);}
+    p{line-height: px2rem(40);font-size: px2rem(24);}
 }
 .item_3{
     span{color: $C43bee3;font-size: px2rem(24);
     display: block;
     line-height: px2rem(60);}
-    p{color: $fontC;font-size: px2rem(20);line-height: px2rem(40);}
+    p{color: $fontC;font-size: px2rem(24);line-height: px2rem(40);}
     .abCont{display: flex;flex-wrap: wrap;}
     .item {    
         position: relative;

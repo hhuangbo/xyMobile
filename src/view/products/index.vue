@@ -154,7 +154,7 @@ h3 {
   }
   .desc {
     color: $fontC;
-    font-size: px2rem(20);
+    font-size: px2rem(24);
     line-height: px2rem(40);
   }
   img {
@@ -191,7 +191,7 @@ h3 {
   }
   .infoContent {
     color: $fontC;
-    font-size: px2rem(22);
+    font-size: px2rem(24);
     line-height: px2rem(40);
     flex: 3;
   }
@@ -212,7 +212,7 @@ h3 {
     text-align: center;
   }
   .infoContent {
-    font-size: px2rem(20);color:$fontC;line-height: px2rem(40);
+    font-size: px2rem(24);color:$fontC;line-height: px2rem(40);
   }
 }
 </style>

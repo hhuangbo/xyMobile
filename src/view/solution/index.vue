@@ -30,27 +30,32 @@ export default {
             bannerData:{},
             solutbannerData:[
                 {
-                    bannerImg:require('../../assets/images/solution1.jpg'),
+                    bannerImg:'',
+                    bannerImgName:'solution1',//require('../../assets/images/solution1.jpg'),
                     title:'Digital solutions for cultural-based tourism towns',
                     content:'文旅小镇数字化解决方案'
                 },
                 {
-                    bannerImg:require('../../assets/images/solution2.jpg'),
+                    bannerImg:'',
+                    bannerImgName:'solution2',//require('../../assets/images/solution2.jpg'),
                     title:'Digital solutions for industrial parks',
                     content:'产业园区数字化解决方案'
                 },
                 {
-                    bannerImg:require('../../assets/images/solution3.jpg'),
+                    bannerImg:'',
+                    bannerImgName:'solution3',//require('../../assets/images/solution3.jpg'),
                     title:'Digital solutions for sports venues',
                     content:'运动场馆数字化解决方案'
                 },
                 {
-                    bannerImg:require('../../assets/images/solution4.jpg'),
+                    bannerImg:'',
+                    bannerImgName:'solution4',//require('../../assets/images/solution4.jpg'),
                     title:'Digital solutions for third-party logistics',
                     content:'三方物流数字化解决方案'
                 },
                 {
-                    bannerImg:require('../../assets/images/solution5.jpg'),
+                    bannerImg:'',
+                    bannerImgName:'solution5',//require('../../assets/images/solution5.jpg'),
                     title:'Digital solutions for intelligent manufacturing',
                     content:'智能制造数字化解决方案'
                 }
@@ -129,7 +134,7 @@ export default {
         init(){
             this.bannerData=this.solutbannerData[0];
             this.contentData=this.solutContData[0]
-            console.log(this.bannerImgs.solution2)
+            // console.log(this.bannerImgs.solution2)
         },
         toggleNav(index){
             setTimeout(()=>{

@@ -62,7 +62,6 @@ export default {
         ? event.stopPropagation()
         : (event.cancelBubble = true);
       this.menuShow = true;
-      console.log(this)
     },
     hanleMenuClose() {
       this.menuShow = false;
@@ -80,18 +79,30 @@ export default {
           that.headerFixed = false;
         }
       });
+      //手指触摸时触发
+      window.addEventListener("touchstart",e => {
+          setTimeout(() => {
+            if (parseInt(window.pageYOffset) >= offsetTop) {
+              that.headerFixed = true;
+            } else {
+              that.headerFixed = false;
+            }
+          }, 200);
+        },
+        false
+      );
       //手指离开屏幕
-    //   window.addEventListener("touchend",e => {
-    //       setTimeout(() => {
-    //         if (parseInt(window.pageYOffset) >= offsetTop) {
-    //           that.headerFixed = true;
-    //         } else {
-    //           that.headerFixed = false;
-    //         }
-    //       }, 200);
-    //     },
-    //     false
-    //   );
+      window.addEventListener("touchend",e => {
+          setTimeout(() => {
+            if (parseInt(window.pageYOffset) >= offsetTop) {
+              that.headerFixed = true;
+            } else {
+              that.headerFixed = false;
+            }
+          }, 200);
+        },
+        false
+      );
     },
     init() {
       for (let i in this.menuList) {
@@ -145,6 +156,7 @@ header {
 }
 .logo img {
   vertical-align: middle;
+  width:px2rem(220);
 }
 .toggleMenu {
   color: #fff;

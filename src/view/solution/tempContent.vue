@@ -22,7 +22,7 @@ export default {
 
 @import "../../common/css/px2rem.scss";
 .infoContent{
-    font-size: px2rem(20);
+    font-size: px2rem(24);
     color: #686868;
     line-height: px2rem(40);
 }

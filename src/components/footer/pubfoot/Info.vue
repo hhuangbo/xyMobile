@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../../common/css/px2rem.scss";
 .info{margin:px2rem(40) 0;
-    h3{font-size: px2rem(20);line-height: px2rem(40);}
+    h3{font-size: px2rem(24);line-height: px2rem(40);}
 }
 .infoC{
     display: flex;
@@ -29,7 +29,7 @@ export default {
     img{padding-right: px2rem(20);}
     div{padding: px2rem(20) 0;}
     p{
-        font-size: px2rem(16);
+        font-size: px2rem(18);
         line-height: px2rem(40);
         span{
             font-size: px2rem(24);

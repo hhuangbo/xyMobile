@@ -132,7 +132,7 @@ h3{font-size: px2rem(36);color: #353535;text-align: center;line-height:px2rem(60
 .abCont{
     display: flex;
     flex-wrap: wrap;
-    .infoContent{color: $fontC;font-size: px2rem(22);line-height: px2rem(40);}
+    .infoContent{color: $fontC;font-size: px2rem(24);line-height: px2rem(40);}
 }
 .item_1{
     .item{
