@@ -20,25 +20,29 @@ export default {
 
 <style lang="scss" scoped>
 
+@import "../../common/css/px2rem.scss";
 .infoContent{
-    font-size: .2rem;
+    font-size: px2rem(20);
     color: #686868;
-    line-height: .40rem;
+    line-height: px2rem(40);
 }
 .tabContent{
-    margin-top: 20%;
+    
     h3{    
-        font-size: .24rem;
+        font-size: px2rem(24);
         text-align: center;
         color: #353535;
-        padding: .10rem 0;
+        line-height: px2rem(65);
     }
     ul{margin: 3% auto;display: flex;flex-wrap: wrap;
         // justify-content: space-around;
     }
     li{
-        width: 50%;box-sizing: border-box;padding:.17rem;
+        width: 50%;box-sizing: border-box;padding:px2rem(17);
         img{width: 100%;}
     }
+}
+@media screen and (max-width: 1024px){
+    .tabContent{margin-top: 22%;}
 }
 </style>

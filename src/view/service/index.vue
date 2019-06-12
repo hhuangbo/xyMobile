@@ -105,10 +105,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../common/css/px2rem.scss";
 $fontC:#686868;
-h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
+h3{font-size: px2rem(36);color: #353535;text-align: center;line-height:px2rem(64);}
 .item_1{
-    p{font-size: .2rem;color: $fontC;line-height: .5rem;flex:3;}
+    p{font-size: px2rem(20);color: $fontC;line-height: px2rem(40);flex:3;}
     .abCont{width: 90%;margin: 0 auto;}
     .servItem{
         display: flex;    
@@ -117,9 +118,9 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
             flex:1;
             color: $C43bee3;
             span{display: block;}
-            .title{font-size: .3rem;}
+            .title{font-size: px2rem(30);}
         }
-        .iconfont{font-size: .30rem;padding: 0 22%;}
+        .iconfont{font-size: px2rem(30);padding: 0 22%;}
     }
 }
 .item_2{
@@ -148,44 +149,46 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
         position:absolute;
         left: 0;
         top: 10%;
-        font-size:.24rem;
+        font-size:px2rem(24);
         box-sizing: border-box;
         text-align: center;
     }
     .serviceCont{width:100%;height:100%;display: flex;
         text-align: center;justify-content: space-around;
         position:absolute;top:40%;
-        img{width: .7rem;}
+        img{width: px2rem(70);}
     }
     .abCont2{width:100%;
-        background-color:$C1075aa;padding: 5% 8%;
+        background-color:$C1075aa;padding: 5% 4%;
         .item{padding-bottom:8%;width: 100%;}
-        span{padding-bottom: .25rem;}
+        span{padding-bottom: px2rem(25);}
     }
-    span{display: block;font-size: .3rem;}
-    p{line-height: .50rem;font-size: .2rem;}
+    span{display: block;font-size: px2rem(30);}
+    p{line-height: px2rem(40);font-size: px2rem(20);}
 }
 .item_3{
-    span{color: $C43bee3;font-size: .24rem;}
-    p{color: $fontC;font-size: .2rem;}
+    span{color: $C43bee3;font-size: px2rem(24);
+    display: block;
+    line-height: px2rem(60);}
+    p{color: $fontC;font-size: px2rem(20);line-height: px2rem(40);}
     .abCont{display: flex;flex-wrap: wrap;}
     .item {    
         position: relative;
-        width: 43%;
-        height: 2rem;
+        width: 44%;
+        // height: 20%;
         margin: 3%;
         box-sizing: border-box;
-        position: relative;
     }
-    .cont{
-        width:85%;
-        height: 1.5rem;
+    .cont{    
+        width: 95%;
+        height: 95%;
         padding: 5%;
         background-color: #fff;
+        box-sizing: border-box;
     }
     .bg{
         position: absolute;
-        font-size: .8rem;
+        font-size: px2rem(80);
         color: #43bee3;
     }
     .bg_0{
@@ -194,7 +197,7 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
     }
     .bg_1{
         &::before{content: "\eaae";}
-        bottom: -24%;
+        bottom: -29%;
         left: 34%;
     }
     .bg_2{
@@ -202,7 +205,7 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
     }
     .bg_3{
         &::before{content: "\eaf4";} 
-        left: -22%;
+        left: -23%;
         top: 24%;
     }
 }

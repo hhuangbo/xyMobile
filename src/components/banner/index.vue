@@ -1,6 +1,6 @@
 <template>
   <transition>
-    <div class="banner" :style="{backgroundImage:'url(' + data.bannerImg + ')'}">
+    <div class="banner animated delay-1s" :style="{backgroundImage:'url(' + data.bannerImg + ')'}">
         <div class="bCont">
           <h2 class="animated fadeInDown delay-100ms">{{data.title}}</h2>
           <h4 class="animated bounceInLeft delay-150ms" v-html="data.content"></h4>
@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../common/css/px2rem.scss";
 .banner{
     width: 100%;
     // background:url(../../assets/images/service.jpg) no-repeat;
@@ -26,9 +27,9 @@ export default {
     position: relative;
     background-size: 100%;
     .bCont{
-      padding: 0 1.1rem;
+      padding: 0 8%;
       position: absolute;
-      top: 45%;
+      top: 55%;
     }
 }
 </style>

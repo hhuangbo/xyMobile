@@ -22,10 +22,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../common/css/px2rem.scss";
 footer{
     width: 100%;
     background-color: $C000714;
-    padding: 5% 8% 2%;
+    padding: 5%;
     box-sizing: border-box;
 }
 .footerTop{

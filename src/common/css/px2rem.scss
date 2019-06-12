@@ -1,6 +1,6 @@
 $designWidth: 750;
 
 @function px2rem($px) {
-    @return $px / 50 + rem;
+    @return $px / 100 + rem;
 }
 

@@ -47,10 +47,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../common/css/px2rem.scss";
 .goTop{
-    font-size: .6rem;
+    font-size: px2rem(60);
     color: $C43bee3;
     position:fixed;right:4%;bottom:15%;
     cursor: pointer;
+    opacity: .8;
 }
 </style>

@@ -51,7 +51,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../common/css/px2rem.scss";
 .fromInfo{
+    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -59,15 +61,15 @@ export default {
     text-align: center;
 }
 h2{
-    font-size: .3rem;
-    margin: .08rem 0 .3rem;
+    font-size: px2rem(30);
+    margin: px2rem(8) 0 px2rem(30);
 }
 .fromItem{
-    font-size: .2rem;
+    font-size: px2rem(20);
     color: $C80838a;
     border: 1px solid $C80838a;
-    margin: .1rem 0;
-    label{width:15%;}
+    margin: 5% 0;
+    display: flex;
     input{
         border: 0;
         background-color: $C000714;
@@ -75,14 +77,14 @@ h2{
     }
 }
 .fromItem,.btnsubmit{
-    padding: .15rem;
+    padding: px2rem(15);
     border-radius: 5px;
 }
 .btnsubmit{
     width: 50%;
-    margin: .08rem auto;
+    margin: px2rem(8)auto;
     color: #fff;
-    font-size: .24rem;
+    font-size: px2rem(24);
     background-color: $C43bee3;
     border-radius: 5px;
 }
@@ -91,7 +93,7 @@ h2{
     width: 100%;
     height: 100%;
     color: #fff;
-    font-size: .24rem;
+    font-size: px2rem(24);
     font-weight: bold;
     position: absolute;
     top: 0;
@@ -110,14 +112,14 @@ h2{
         width: 100%;
         transform: translate(-50%,-50%);
         text-align: center;
-        font-size: .18rem;
+        font-size: px2rem(18);
     }
     .btnClose{
         width: 25%;
         background-color:#fff;
         color: $C1075aa; 
-        padding: .05ren 0;
-        margin: .2rem 0;
+        padding: px2rem(5) 0;
+        margin: px2rem(2) 0;
         border-radius: 5px;
     }
 }

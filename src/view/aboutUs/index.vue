@@ -77,7 +77,7 @@ export default {
                     <p>专注于企业数据资产化与人工智能方向，为大中型企业客户提供数字化升级的咨询以及落地解决方案，核心团队以80、90后为主，来自于百度、京东、中国联通以及深度合作的美国康奈尔大学统计学部等，公司旗下拥有自主研发的大数据智能分析平台，是专业的大数据与人工智能解决方案提供商。</p>`
             },
             chooiceData:{
-                typeName:'为什么选择我们文化',
+                typeName:'为什么选择我们',
                 data:[
                     {title:'创新',img:require('../../assets/images/ac_1.png'),content:'和我们的客户共同创新，我们更懂中国企业，以及通过数据为企业带来更大的价值。'},
                     {title:'产品',img:require('../../assets/images/ac_2.png'),content:'超过10年的技术积累，结合云计算、多种算法、数据可视化以及人工智能打造的数聚平台产品。'},
@@ -116,14 +116,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../common/css/px2rem.scss";
 $fontC:#686868;
-h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
+h3{font-size: px2rem(36);color: #353535;text-align: center;line-height:px2rem(60);}
 .info{
-    width: 2rem;
+    width: px2rem(100);
     margin: 0 auto;
     text-align: center;
 }
-.infoTitle{color: $C43bee3;font-size: .28rem;padding: 10% 0;}
+.infoTitle{color: $C43bee3;font-size: px2rem(28);line-height:px2rem(60);}
 .infoImg{
     // height: 100rem;
     // background-image: url(../../assets/images/icons.png);
@@ -131,16 +132,16 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
 .abCont{
     display: flex;
     flex-wrap: wrap;
-    .infoContent{color: $fontC;font-size: .22rem;line-height: .32rem;}
+    .infoContent{color: $fontC;font-size: px2rem(22);line-height: px2rem(40);}
 }
 .item_1{
     .item{
         width:100%;
-        line-height: .5rem;
+        line-height: px2rem(50);
         img{width: 100%;}
     }
-    .title{font-size: .28rem !important;color: $C43bee3;}
-    .infoContent{font-size: .24rem;line-height: .5rem;}
+    .title{font-size: px2rem(28) !important;color: $C43bee3;font-weight: 500;}
+    .infoContent{font-size: px2rem(24);line-height: px2rem(40);}
 
 }
 .item_2{
@@ -149,7 +150,8 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
         padding:2% 5%;
         box-sizing: border-box;
     }
-    p{font-size: .22rem;}
+    .infoImg img{width: 100%;}
+    p{font-size: px2rem(22);}
 }
 .item_3{
     background: url(../../assets/images/a-2.jpg) no-repeat;
@@ -160,29 +162,31 @@ h3{font-size: .36rem;color: #353535;text-align: center;padding-bottom:.20rem;}
     }
     .item{
         width: 100%;
-        padding: .16rem;
-        margin-bottom: .14rem;
+        padding: px2rem(16);
+        margin-bottom: px2rem(14);
         box-sizing: border-box;
         background-color: #fff;
         display: flex;
     }
     img{width:35%;height: 100%;}
-    .infoContent{padding-left: .16rem;}
+    .infoContent{padding-left: px2rem(16);}
 }
 .item_4{
     // .abCont{display: flex;}
     .item{width:50%;text-align: center;}
     img{width:90%;}
-    .infoContent{padding:.20rem 0;}
+    .infoContent{line-height: px2rem(60rem)}
 }
 .item_5{
     .abCont{justify-content: space-between;}
     .item{
         width: 37%;
-        padding: .34rem;
-        margin: .2rem 0;
+        padding: px2rem(34);
+        margin: px2rem(20) 0;
         background-color: #fff;
     }
+    .info{width: 2rem;}
+    img{width: 60%;}
 }
 
 </style>

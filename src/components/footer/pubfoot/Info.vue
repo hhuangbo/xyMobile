@@ -19,19 +19,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.info{margin:.4rem 0;
-    h3{font-size: .2rem;line-height: .4rem;}
+@import "../../../common/css/px2rem.scss";
+.info{margin:px2rem(40) 0;
+    h3{font-size: px2rem(20);line-height: px2rem(40);}
 }
 .infoC{
     display: flex;
-    padding: .3rem 0;
-    img{padding-right: .2rem;}
-    div{padding: .2rem 0;}
+    padding: px2rem(30) 0;
+    img{padding-right: px2rem(20);}
+    div{padding: px2rem(20) 0;}
     p{
-        font-size: .16rem;
-        line-height: .4rem;
+        font-size: px2rem(16);
+        line-height: px2rem(40);
         span{
-            font-size: .24rem;
+            font-size: px2rem(24);
             font-weight: bold;
             color: $C43bee3;
         }

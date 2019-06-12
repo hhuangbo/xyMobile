@@ -45,5 +45,9 @@ export default new Router({
         }
       ]
     }
-  ]
+  ],
+  // 移动端路由跳转时回到顶部位置
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })

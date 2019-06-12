@@ -9,9 +9,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../common/css/px2rem.scss";
 .copyright{
-    font-size: .12rem;
+    font-size: px2rem(18);
     color: #686568;
-    padding: .24rem 0;
+    // padding: px2rem(28) 0;
 }
 </style>

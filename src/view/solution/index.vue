@@ -1,6 +1,6 @@
 <template>
     <transition>
-        <div class="solution">
+        <div class="solution ">
             <banner v-if="bannerShow" :data="bannerData"></banner>
             <div class="content soluCont">
                 <ul class="soluTab">
@@ -15,6 +15,9 @@
 <script>
 import banner from '../../components/banner/index'
 import tempContent from './tempContent'
+
+import {mapGetters} from  'vuex'
+
 export default {
     components:{
         banner,
@@ -116,6 +119,9 @@ export default {
             ]
         }
     },
+    computed:{
+        ...mapGetters(['bannerImgs'])
+    },
     mounted(){
         this.init();
     },
@@ -123,18 +129,19 @@ export default {
         init(){
             this.bannerData=this.solutbannerData[0];
             this.contentData=this.solutContData[0]
+            console.log(this.bannerImgs.solution2)
         },
         toggleNav(index){
-            this.bannerShow=false;
             setTimeout(()=>{
                 this.bannerShow=true;
-                document.documentElement.scrollTop = document.body.scrollTop=0;
+                // document.documentElement.scrollTop = document.body.scrollTop=0;
             },0)
             this.tabActive=index;
             var solutContData=this.solutContData;
             for(let i in solutContData){
                 this.contentData=solutContData[index]
                 this.bannerData=this.solutbannerData[index];
+                // this.bannerShow=true;
             }
         }
     }
@@ -142,24 +149,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../common/css/px2rem.scss";
 .soluCont{
     position: relative;
 }
 .soluTab{
     width: 90%;
-    font-size: .24rem;
+    font-size: px2rem(30);
     color: #353535;
     background-color: #fff;
     position: absolute;
-    top: -.25rem;
+    top: px2rem(-25);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     box-sizing: border-box;
-    border-radius: .05rem;
+    border-radius: 5px;
     overflow: hidden;
     box-shadow:.01rem .10rem 20rem 0 rgba(227,230,232,.6);
-    li{padding:.2rem .4rem;text-align:center;cursor: pointer;}
+    li{padding:px2rem(20) px2rem(40);text-align:center;cursor: pointer;}
     .active{background-color: $C43bee3;color: #fff;}
     li:last-child{visibility: hidden;}
 }

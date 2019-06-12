@@ -111,25 +111,25 @@ export default {
         {
           typeName: "数聚平台（DA.DaaS）",
           content:
-            "数聚平台：新娱旗下一站式大数据应用平台，致力于为企业构建数据中台提供基础的平台能力支撑，提供从数据同步、数据开发、数据治理、数据服务的一站式大数据全链路解决方案。",
+            "新娱旗下一站式大数据应用平台，致力于为企业构建数据中台提供基础的平台能力支撑，提供从数据同步、数据开发、数据治理、数据服务的一站式大数据全链路解决方案。",
           img: require("../../assets/images/daas.png")
         },
         {
           typeName: "数聚中台",
           content:
-            "数据中台：数字化赋能构建数据中台，AI变现引擎在数字化中台上服务于各个企业",
+            "数字化赋能构建数据中台，AI变现引擎在数字化中台上服务于各个企业",
           img: require("../../assets/images/dataC.jpg")
         },
         {
           typeName: "AI深度学习平台",
           content:
-            "AI深度学习平台：依托数据中台，应用多种场景，AI深度学习平，服务于各个企业",
+            "依托数据中台，应用多种场景，AI深度学习平，服务于各个企业",
           img: require("../../assets/images/ai.jpg")
         },
         {
           typeName: "可视化平台",
           content:
-            "可视化平台：提供多端的可视化展示方案，轻松搭建可视化应用，满足企业多种业务场景的大屏需求，支持微信和钉钉集成。",
+            "提供多端的可视化展示方案，轻松搭建可视化应用，满足企业多种业务场景的大屏需求，支持微信和钉钉集成。",
           img: require("../../assets/images/visualiz.jpg")
         }
       ]
@@ -139,26 +139,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../common/css/px2rem.scss";
 $fontC: #686868;
 h3 {
-  font-size: 0.36rem;
+  font-size: px2rem(36);
   color: #353535;
   text-align: center;
-  padding-bottom: 0.2rem;
+  line-height:px2rem(64);
 }
 .prodCont {
   .item {
     text-align: center;
-    margin: 0.2rem auto;
+    margin: px2rem(20) auto;
   }
   .desc {
     color: $fontC;
-    font-size: 0.2rem;
-    line-height: 0.4rem;
+    font-size: px2rem(20);
+    line-height: px2rem(40);
   }
   img {
-    max-width: 70%;
-    margin: 0.1rem auto;
+    width: 100%;
+    margin: px2rem(10) auto;
   }
 }
 .abCont {
@@ -169,36 +170,36 @@ h3 {
   .item {
     width: 100%;
     display: flex;
-    padding: 0.2rem 0;
+    padding: px2rem(20) 0;
   }
   p {
-    font-size: 0.18rem;
+    font-size: px2rem(18);
   }
   .info {
     margin: 0 auto;
     text-align: center;
-    padding-right: 0.4rem;
+    padding-right: px2rem(40);
     flex: 1;
     img {
-      width: 0.9rem;
+      width: px2rem(90);
     }
   }
   .infoTitle {
     color: $C43bee3;
-    font-size: 0.24rem;
+    font-size: px2rem(24);
     padding: 5%;
   }
   .infoContent {
     color: $fontC;
-    font-size: 0.22rem;
-    line-height: 0.4rem;
+    font-size: px2rem(22);
+    line-height: px2rem(40);
     flex: 3;
   }
 }
 .item_3 {
   .item {
     width: 50%;
-    padding: 0 0.2rem;
+    padding: 0 px2rem(20);
     box-sizing: border-box;
   }
   .info img {
@@ -206,12 +207,12 @@ h3 {
   }
   .infoTitle {
     color: #353535;
-    font-size: 0.24rem;
-    line-height: .6rem;
+    font-size: px2rem(24);
+    line-height: px2rem(60);
     text-align: center;
   }
   .infoContent {
-    font-size: 0.2rem;color:$fontC;line-height: .4rem;
+    font-size: px2rem(20);color:$fontC;line-height: px2rem(40);
   }
 }
 </style>
