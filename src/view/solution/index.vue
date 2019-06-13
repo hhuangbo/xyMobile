@@ -1,7 +1,7 @@
 <template>
     <transition>
         <div class="solution ">
-            <banner v-if="bannerShow" :data="bannerData"></banner>
+            <banner v-if="bannerShow" :data="bannerData" ></banner>
             <div class="content soluCont">
                 <ul class="soluTab">
                     <li v-for="(item,index) in soluTabData" :class="{'active' : index == tabActive}" @touchstart="toggleNav(index)">{{item.name}}</li>
@@ -124,9 +124,6 @@ export default {
             ]
         }
     },
-    computed:{
-        ...mapGetters(['bannerImgs'])
-    },
     mounted(){
         this.init();
     },
@@ -134,19 +131,14 @@ export default {
         init(){
             this.bannerData=this.solutbannerData[0];
             this.contentData=this.solutContData[0]
-            // console.log(this.bannerImgs.solution2)
         },
         toggleNav(index){
-            setTimeout(()=>{
-                this.bannerShow=true;
-                // document.documentElement.scrollTop = document.body.scrollTop=0;
-            },0)
+            this.bannerShow=true;
             this.tabActive=index;
             var solutContData=this.solutContData;
             for(let i in solutContData){
                 this.contentData=solutContData[index]
                 this.bannerData=this.solutbannerData[index];
-                // this.bannerShow=true;
             }
         }
     }

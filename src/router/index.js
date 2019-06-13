@@ -23,10 +23,6 @@ export default new Router({
       redirect:'/home',
       component: index,
       children:[
-        // {
-        //   path:'/home',
-        //   component:home,
-        // },
         {
           path:'/aboutUs',
           component:aboutUs,

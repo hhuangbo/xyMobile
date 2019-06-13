@@ -112,7 +112,7 @@ export default {
           typeName: "数聚平台（DA.DaaS）",
           content:
             "新娱旗下一站式大数据应用平台，致力于为企业构建数据中台提供基础的平台能力支撑，提供从数据同步、数据开发、数据治理、数据服务的一站式大数据全链路解决方案。",
-          img: require("../../assets/images/daas.png")
+          img: require("../../assets/images/daas.jpg")
         },
         {
           typeName: "数聚中台",
@@ -156,6 +156,7 @@ h3 {
     color: $fontC;
     font-size: px2rem(24);
     line-height: px2rem(40);
+    text-align: left;
   }
   img {
     width: 100%;

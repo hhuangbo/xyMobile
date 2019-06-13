@@ -36,10 +36,10 @@ export default {
     background-size:cover;
 }
 .copyright{
-    position: fixed;
+    position: absolute;
     right: 5%;
     left: 5%;
-    bottom:3%;
+    bottom:1%;
 }
 article{    
     width: 77%;
@@ -50,7 +50,7 @@ article{
     text-align: left;
 }
 h2{
-    font-size: px2rem(68);
+    font-size: px2rem(60);
     color: $C43bee3;
 }
 h4{

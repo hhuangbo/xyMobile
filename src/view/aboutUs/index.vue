@@ -98,7 +98,8 @@ export default {
                 typeName:'新娱资质',
                 data:[
                     {img:require('../../assets/images/ax-1.jpg'),content:'中关村高新企业'},
-                    {img:require('../../assets/images/ax-2.jpg'),content:'大数据产业生态联盟成员'}
+                    {img:require('../../assets/images/ax-2.jpg'),content:'大数据产业生态联盟成员'},
+                    {img:require('../../assets/images/ax-3.jpg'),content:'信息安全管理体系认证'}
                 ]
             },
             xycultureData:{

@@ -16,16 +16,7 @@
 export default {
     props:[
         'data'
-    ],
-    data(){
-      return{
-        
-      }
-    },
-    mounted(){
-      console.log(this.data.bannerImg);
-      
-    }
+    ]
 
 }
 </script>
@@ -44,6 +35,7 @@ export default {
       top: 55%;
     }
 }
+
 
 .solution1{background-image:url('../../assets/images/solution1.jpg') !important;}
 .solution2{background-image:url('../../assets/images/solution2.jpg') !important;}

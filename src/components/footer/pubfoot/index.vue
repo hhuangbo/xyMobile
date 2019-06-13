@@ -26,7 +26,7 @@ export default {
 footer{
     width: 100%;
     background-color: $C000714;
-    padding: 5%;
+    padding: 5% 5% 2%;
     box-sizing: border-box;
 }
 .footerTop{

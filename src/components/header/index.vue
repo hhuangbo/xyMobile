@@ -1,5 +1,5 @@
 <template>
-  <header :class="{'headerFixed' : headerFixed} " id="header">
+  <header :class="{'animated fadeInDown deplay-1s headerFixed' : headerFixed} " id="header">
     <div class="logo">
       <img :src="opLogo">
     </div>
@@ -144,11 +144,12 @@ header {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 9;
 }
 .headerFixed {
+  position: fixed;
   // background-color: #000;
   // opacity: 0.9;
   background-color:rgba(0, 0, 0, 0.87);
@@ -156,7 +157,7 @@ header {
 }
 .logo img {
   vertical-align: middle;
-  width:px2rem(220);
+  width:px2rem(250);
 }
 .toggleMenu {
   color: #fff;
@@ -178,7 +179,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 1);
   opacity: 0.6;
   text-align: center;
   color: #fff;
