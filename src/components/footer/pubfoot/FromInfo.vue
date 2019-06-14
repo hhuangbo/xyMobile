@@ -8,7 +8,7 @@
             </div>
             <div class="fromItem">
                 <label >电话：</label>
-                <input type="text" value="" v-model.trim = "info.phone" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
+                <input type="number" value="" v-model.trim = "info.mobile" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
             </div>
             <div class="fromItem">
                 <label>邮箱：</label>
@@ -31,17 +31,51 @@ export default {
     data(){
         return{
             isShow:false,
+            errTipShow:false,//是否显示错误信息
+            errorTip:'',//错误提示
             info:{
                 name:'',
-                phone:'',
+                mobile:'',
                 email:''
             }
         }
     },
     methods:{
         btnsubmit(){
-            this.isShow = true;
-            console.log(this.info.phone)
+            //邮箱
+            var regEmail= /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            //手机号码
+            let regMobile=11 && /^((13|14|15|17|18)[0-9]{1}\d{8})$/;
+            if(this.info.mobile == '' && this.info.email == ''){
+                this.errorTip='手机号和邮箱不能为空，请选填！';
+                this.errTipShow=true;
+                return;
+            }
+            if(this.info.email == '' || this.info.mobile != ''){//邮箱为空 手机号不为空 则验证
+                if(!regMobile.test(this.info.mobile)){
+                    this.errorTip='手机号有误！';
+                    this.errTipShow=true;
+                    return;
+                }
+            }
+            if(this.info.mobile == '' || this.info.email != ''){//手机号为空 邮箱不为空 则验证
+                if(!regEmail.test(this.info.email)){ //邮箱
+                    this.errorTip='邮箱有误！';
+                    this.errTipShow=true;
+                    return;
+                }
+            }
+            this.errTipShow=false;
+            let params=JSON.stringify(this.info)
+            this.$http({
+                method: 'post',
+                url:'/info_reception/',
+                data:params
+            }).then(res=>{  
+                this.isShow=true;//弹出成功的提示框
+            }).catch(err => {
+                console.log(err);
+            }); 
         },
         btnClose(){
             this.isShow = false
@@ -122,5 +156,10 @@ h2{
         margin: px2rem(2) 0;
         border-radius: 5px;
     }
+}
+.errorTip{
+    color: #ce2e2e;
+    font-size: 12px;
+    text-align: left;
 }
 </style>

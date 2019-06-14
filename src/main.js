@@ -10,6 +10,12 @@ import 'animate.css'
 
 import "./common/js/rem.js";
 
+import axios from 'axios'
+// baseURL配置
+axios.defaults.baseURL = window.location.origin;//测试地址"http://test_www.shinyutech.com";
+axios.defaults.headers.post["Content-Type"] ="application/x-www-form-urlencoded";
+Vue.prototype.$http = axios
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
