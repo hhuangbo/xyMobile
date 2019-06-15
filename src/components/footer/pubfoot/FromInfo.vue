@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import qs from 'qs'
 export default {
     data(){
         return{
@@ -70,15 +71,19 @@ export default {
             this.$http({
                 method: 'post',
                 url:'/info_reception/',
-                data:params
+                data:qs.stringify(this.info)
             }).then(res=>{  
+                console.log(res,params)
                 this.isShow=true;//弹出成功的提示框
             }).catch(err => {
                 console.log(err);
             }); 
         },
         btnClose(){
-            this.isShow = false
+            this.isShow = false;
+            this.info.name='';
+            this.info.mobile='';
+            this.info.email='';
         }
     }
 }

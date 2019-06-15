@@ -19,5 +19,8 @@ export default {
 }
 @media screen and (min-width:1050px) {
   html,body{font-size: 40px !important;}
+  
+    header{padding:2% 4% !important;}
+    .toggleMenu, .menuClose{padding:1% 0 0 0 !important;}
 }
 </style>
