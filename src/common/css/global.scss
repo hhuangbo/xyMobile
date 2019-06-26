@@ -46,6 +46,8 @@ textarea,input{
 span,p,div{ 
     word-wrap:break-word;
 } 
+
+.parag{padding: 8px 0;}
 .lf{ float:left; }
 .rt{ float:right; }
 .clearfix{ content: ''; display: block; clear: both; }
@@ -57,10 +59,11 @@ h2,h3,h4{font-weight: 400;}
 
 .content{
     padding:2% 4%;
-    background-color: #f1f1f2;
+    // background-color: #f1f1f2;
 }
 .banner{
     min-height: px2rem(465);
-    h2{font-size: px2rem(40);color: $C43bee3;font-weight: bold;padding:5px 0;}
+    h2{font-size: px2rem(40);color: $C43bee3;font-weight: bold;padding:0 0 7px 0;}
     h4{font-size: px2rem(26);color: #fff;}
 }
+.textIndent2{text-indent: 2em;}

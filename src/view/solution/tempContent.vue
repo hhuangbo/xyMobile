@@ -1,6 +1,6 @@
 <template>
     <div class="tabContent">
-        <p class="desc infoContent">{{contentData.desc}}</p>
+        <p class="desc infoContent" v-html="contentData.desc"></p>
         <ul class="">
             <li v-for="ite in contentData.data">
                 <img :src="ite.img" />

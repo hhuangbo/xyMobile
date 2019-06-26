@@ -183,7 +183,7 @@ h3{font-size: px2rem(36);color: #353535;text-align: center;line-height:px2rem(64
         width: 95%;
         height: 95%;
         padding: 5%;
-        background-color: #fff;
+        background-color: #fbfbfb;
         box-sizing: border-box;
     }
     .bg{

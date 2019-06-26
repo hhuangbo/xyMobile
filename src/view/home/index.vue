@@ -3,7 +3,7 @@
         <theader></theader>
             <transition>
                 <article>
-                    <h2 class ="animated fadeInDown delay-20ms">数据连接 展望未来 让决策更智能</h2>
+                    <h2 class ="animated fadeInDown delay-30ms">数据连接 展望未来 让决策更智能</h2>
                     <h4 class ="animated fadeInUp delay-20ms">大数据与人工智能解决方案提供商</h4>
                 </article>
             </transition>

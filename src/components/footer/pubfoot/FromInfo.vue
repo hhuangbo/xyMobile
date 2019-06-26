@@ -14,13 +14,15 @@
                 <label>邮箱：</label>
                 <input type="email" value="" v-model.trim = "info.email"/>
             </div>
-            <button class="btnsubmit" @click="btnsubmit()">提交申请</button>
+            <div class="errorTip" v-show="errTipShow">{{errorTip}}</div>
+            <button type="button" class="btnsubmit" @touchstart="btnsubmit()">提交申请</button>
         </div>
         <div class="successInfo" v-show="isShow">
             <div class="bg"></div>
             <div class="tips">
                 <p>信息已收到，我们会在24小时内联系您！</p>
-                <button class="btnClose" @click="btnClose()">关闭</button>
+                <button type="button" class="btnClose" @touchstart="btnClose()" >关闭</button>
+                
             </div>
         </div>
     </div>
@@ -40,6 +42,8 @@ export default {
                 email:''
             }
         }
+    },
+    mounted(){
     },
     methods:{
         btnsubmit(){
@@ -73,7 +77,6 @@ export default {
                 url:'/info_reception/',
                 data:qs.stringify(this.info)
             }).then(res=>{  
-                console.log(res,params)
                 this.isShow=true;//弹出成功的提示框
             }).catch(err => {
                 console.log(err);
@@ -158,7 +161,7 @@ h2{
         background-color:#fff;
         color: $C1075aa; 
         padding: px2rem(5) 0;
-        margin: px2rem(2) 0;
+        margin: px2rem(20) 0;
         border-radius: 5px;
     }
 }

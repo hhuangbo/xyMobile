@@ -4,10 +4,9 @@
         <div class="content item_1">
             <h3>{{relXYData.typeName}}</h3>
             <div class="abCont">
-                <div class="item"><img src="../../assets/images/map.png" /></div>
+                <div class="item"><img :src="relXYData.img" /></div>
                 <div class="item" >
-                    <p class="title">北京新娱互动网络科技有限公司创立于2017年，诞生在中关村紫荆花科技众创基地</p>
-                    <p class="infoContent">专注于企业数据资产化与人工智能方向，为大中型企业客户提供数字化升级的咨询以及落地解决方案，核心团队以80、90后为主，来自于百度、京东、中国联通以及深度合作的美国康奈尔大学统计学部等，公司旗下拥有自主研发的大数据智能分析平台，是专业的大数据与人工智能解决方案提供商。</p>
+                    <p class="infoContent">{{relXYData.content}}</p>
                 </div>
             </div>
         </div>
@@ -66,32 +65,30 @@ export default {
         return{
             bannerData:{
                 bannerImg:require('../../assets/images/aboutUs.jpg'),
-                title:'新娱 · 源起',
-                content:`<p>2017年9月，怀创梦想的2个年轻人</p><p>在中关村紫荆花科技众创基地创办了新娱互动，一家伟大的公司从此诞生了……</p>`
+                title:'北京新娱互动网络科技有限公司',
+                content:'2017年，一群怀揣梦想的年轻人在北京创办了新娱互动。'
             },
             relXYData:{
                 typeName:'了解新娱',
                 img:require('../../assets/images/map.png'),
-                content:`
-                    <p class="title">北京新娱互动网络科技有限公司创立于2017年，诞生在中关村紫荆花科技众创基地。</p>
-                    <p>专注于企业数据资产化与人工智能方向，为大中型企业客户提供数字化升级的咨询以及落地解决方案，核心团队以80、90后为主，来自于百度、京东、中国联通以及深度合作的美国康奈尔大学统计学部等，公司旗下拥有自主研发的大数据智能分析平台，是专业的大数据与人工智能解决方案提供商。</p>`
+                content:'北京新娱互动网络科技有限公司创立于2017年， 专注于企业数据资产化与人工智能方向，为大中型企业客户提供数字化升级的咨询以及落地解决方案，核心团队以80、90后为主，来自百度、京东、中国联通以及深度合作的美国康奈尔大学统计学部等，公司旗下拥有自主研发的大数据智能分析平台，是专业的大数据与人工智能解决方案提供商。'
             },
             chooiceData:{
                 typeName:'为什么选择我们',
                 data:[
-                    {title:'创新',img:require('../../assets/images/ac_1.png'),content:'和我们的客户共同创新，我们更懂中国企业，以及通过数据为企业带来更大的价值。'},
-                    {title:'产品',img:require('../../assets/images/ac_2.png'),content:'超过10年的技术积累，结合云计算、多种算法、数据可视化以及人工智能打造的数聚平台产品。'},
+                    {title:'创新',img:require('../../assets/images/ac_1.png'),content:'我们更愿意和客户共同创新、更懂中国企业的经营管理，以及如何通过数据为企业带来更大的价值。'},
+                    {title:'产品',img:require('../../assets/images/ac_2.png'),content:'团队有超过10年的技术积累，结合云计算、新娱大数据核心算法、数据可视化以及人工智能等技术手段打造的数聚平台产品。'},
                     {title:'技术',img:require('../../assets/images/ac_3.png'),content:'产品融合了我们在大数据、互联网和企业应用三个领域的多年积累和成功经验。'},
-                    {title:'服务',img:require('../../assets/images/ac_4.png'),content:'通过客户成功服务，为数字化转型赋能，帮助企业实现最大的商业价值。'}
+                    {title:'服务',img:require('../../assets/images/ac_4.png'),content:'通过新娱互动高于行业标准的优质服务，为企业数字化转型赋能，帮助企业实现最大的商业价值。'}
                 ]
             },
             advantageData:{
                 typeName:'新娱优势',
                 data:[
-                    {img:require('../../assets/images/a2-1.jpg'),content:`<p>骨干团队以80、 85后为主，来自于百度、京东、中国联通等知名企业。</p><p>骨干团队都有大型系统架构研发经验，创始团队本身就在大数据行业从业多年，系统研发经验丰富，处理过PB级大数据经验。</p>`},
+                    {img:require('../../assets/images/a2-1.jpg'),content:'骨干团队以80、 85后为主，来自百度、京东、中国联通等知名企业。骨干团队有丰富的大型系统架构研发经验，创始团队在大数据行业深耕多年，系统研发经验丰富，处理过PB级大数据经验。'},
                     {img:require('../../assets/images/a2-2.jpg'),content:'互联网科技公司特有的数字化理性思维，团队学习能力强，运营能力强，接受新事物极快。'},
-                    {img:require('../../assets/images/a2-3.jpg'),content:'创始人所带来的先进行业经验和理念的传承，国内国际各行业领军企业的数据合作。'},
-                    {img:require('../../assets/images/a2-4.jpg'),content:'自有数聚平台， 完全按照PB级别架构打造。对于数据量的激增与平台扩展能力，做了充分预留。'}
+                    {img:require('../../assets/images/a2-3.jpg'),content:'创始团队的先进行业经验和理念，国内国际各行业领军企业的数据合作。'},
+                    {img:require('../../assets/images/a2-4.jpg'),content:'自有数聚平台，按照PB级别架构打造。对数据量的激增与平台扩展能力，做了充分预留。'}
                 ]
             },
             xyQualData:{
@@ -175,7 +172,7 @@ h3{font-size: px2rem(36);color: #353535;text-align: center;line-height:px2rem(60
 .item_4{
     // .abCont{display: flex;}
     .item{width:50%;text-align: center;}
-    img{width:90%;}
+    img{width:90%;height: 70%;}
     .infoContent{line-height: px2rem(60rem)}
 }
 .item_5{

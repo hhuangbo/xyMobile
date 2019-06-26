@@ -111,25 +111,25 @@ export default {
         {
           typeName: "数聚平台（DA.DaaS）",
           content:
-            "新娱旗下一站式大数据应用平台，致力于为企业构建数据中台提供基础的平台能力支撑，提供从数据同步、数据开发、数据治理、数据服务的一站式大数据全链路解决方案。",
+            "数聚平台是新娱旗下一站式大数据应用平台，致力于为企业构建数据中台提供基础的平台能力支撑，提供从数据同步、数据开发、数据治理、数据服务的一站式大数据全链路解决方案。",
           img: require("../../assets/images/daas.jpg")
         },
         {
           typeName: "数聚中台",
           content:
-            "数字化赋能构建数据中台，AI变现引擎在数字化中台上服务于各个企业",
+            "数聚中台是新娱旗下大数据处理平台，通过数字化赋能、AI变现引擎在数字化中台上服务于各企业，进而提供高效服务。",
           img: require("../../assets/images/dataC.jpg")
         },
         {
           typeName: "AI深度学习平台",
           content:
-            "依托数据中台，应用多种场景，AI深度学习平，服务于各个企业",
+            "AI深度学习平台依托新娱数聚中台，通过AI深度学习，应用于多场景，帮助各企业更有效地实践人工智能。",
           img: require("../../assets/images/ai.jpg")
         },
         {
           typeName: "可视化平台",
           content:
-            "提供多端的可视化展示方案，轻松搭建可视化应用，满足企业多种业务场景的大屏需求，支持微信和钉钉集成。",
+            "新娱可视化平台是针对企业基于可视化应用的要求所推出的一站式可视化服务，通过多端可视化展示方案，轻松搭建可视化应用，满足企业多种业务场景的大屏需求，支持微信和钉钉集成。",
           img: require("../../assets/images/visualiz.jpg")
         }
       ]
@@ -150,7 +150,7 @@ h3 {
 .prodCont {
   .item {
     text-align: center;
-    margin: px2rem(20) auto;
+    margin: px2rem(25) auto;
   }
   .desc {
     color: $fontC;
